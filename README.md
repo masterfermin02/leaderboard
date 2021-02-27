@@ -78,7 +78,7 @@ make build
 - Run the nodejs server:
 
 ```bash
-make server
+make backend
 ```
 
 - Install frontend dependencies:
@@ -95,4 +95,10 @@ make frontend
 - You should see the app running on:
 ```
   🚀 Client Running on: http://localhost:3000
+```
+
+- Stop the backend docker container
+
+```bash
+make stop-backend
 ```
