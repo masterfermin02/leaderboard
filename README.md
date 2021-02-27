@@ -102,3 +102,6 @@ make frontend
 ```bash
 make stop-backend
 ```
+
+- Server and api documentations are on the server folder:
+[Server doc](https://github.com/masterfermin02/leaderboard/tree/main/server)
