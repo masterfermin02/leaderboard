@@ -2,18 +2,6 @@
 
 This repo is meant to keep track of the changes made to the backend of the **Leaderboard** challenge.
 
-## Project  Requirements
-
-- [Docker](https://docs.docker.com/get-docker/)
-- [docker-compose](https://docs.docker.com/compose/install/)
-
-There is no need for the developers to install Node JS since all this is included in the [Dockerfile](./Dockerfile). In addition, the project is using MongoDB for the data base and Redis for caching some requests.
-
-Some Optionals dependencies: 
-
-- [Docker Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) - Helpful Extension when working with docker.
-- [Robo 3T](https://robomongo.org/) - This is a really handy tool when working with MongoDB locally or remotely.
-
 ## Project Structure
 
     .
@@ -37,13 +25,13 @@ For one to be able to execute the project will need to first install the require
 - Clone this repo by running:
 
   ```bash
-  git clone git@github.com:intellisys/internet-hospital.git
+  git clone git@github.com:masterfermin02/leaderboard.git
   ```
 
 - Once cloned run the following command:
 
   ```bash
-  cd internet-hospital && cp .env.sample .env
+  cd leaderboard && cp .env.sample .env && cp server/.env.sample server/.env
   ```
   
   Fill in the necessary variables in the `.env` file
@@ -64,6 +52,11 @@ For one to be able to execute the project will need to first install the require
   ```bash
   docker-compose up -d
   ```
+- Start the server
+
+  ```bash
+  npm run start
+  ```
 
   The server will be up and running in [localhost:5000](http://localhost:5000).
 
@@ -81,90 +74,189 @@ For one to be able to execute the project will need to first install the require
   docker-compose down -v
   ``` 
 
+
+
 ## Endpoints
 
 So far the server have the following set of endpoints:
 
 - `GET:/` - The Home route will just return a `Hello World` message.
-- `GET:/patient` - Returns the list of all patients
-- `POST:/patient` - This endpoint is use to save the patient information the expected format for this endpoint is as follow:
+- `GET:/users` - Returns the list of all users
+- `POST:/users` - This endpoint is use to save the users information the expected format for this endpoint is as follow:
   ```JSON
   {
-    "firstName":{
-      "type":"String",
-      "required":true
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
     },
-    "lastName":{
-      "type":"String",
-      "required":true
-    },
-    "idNumber":{
-      " type":"String"
-    },
-    "phoneNumber":{
-      "type":"String",
-      "required":true
-    }
-  }
-  ```
-
-- `PATCH:/patient/:idNumber` - Update a specific patient. Any of the following fields can be update with this endpoint:
-
-  ```JSON
-  {
-    "firstName":{
-      "type":"String"
-    },
-    "lastName":{
-      "type":"String"
-    },
-    "responses":{
-      "type":"Array",
-    },
-    "queueStatus":{
-      "type":"String",
-      "emun":[
-        "in queue",
-        "in progress",
-        "attended"
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
       ]
     }
-  }
+  ],
+  "name": "Fermin Perdomo",
+  "photo": "https://randomuser.me/api/portraits/men/45.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "41",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4"
+}
   ```
 
-- `POST:/bot` - Bot endpoint
-- `GET:/doctors` - will return the a list of all the doctors
-- `GET:/doctor/:email` -  will return the information for the doctor with with the given email.
-- `POST:/doctor` - This endpoint is use when saving a new doctor entry. This endpoint expects a JSON with the following format:
+- `PATCH:/users/:idNumber` - Update a specific user. Any of the following fields can be update with this endpoint:
 
   ```JSON
   {
-    "name":{
-      "type":"String",
-      "required":true
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
     },
-    "lastName":{
-      "type":"String",
-      "required":true
-    },
-    "phone":{
-      "type":"String",
-      "required":true
-    },
-    "email":{
-      "type":"String",
-      "required":true
-    },
-    "idNumber":{
-      "type":"String",
-      "required":true
-    },
-    "password":{
-      "type":"String",
-      "required":true
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
     }
-  }
+  ],
+  "name": "Fermin Perdomo",
+  "photo": "https://randomuser.me/api/portraits/men/45.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "41",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4"
+}
   ```
-
-- `POST:/login` - Authentication endpoint will return a JWT if the authentication process is successful.
-- `GET/queue` -  Will return a patients queue which is updated every single time a patient enters or leave the queue.
