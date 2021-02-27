@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.margin-top-50 {
+    margin-top: 80px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.collapse-col {
+    height: 50px;
+    text-align: center;
+}
+
+.header-background {
+    background-image: url("./assets/images/background-header-icon.png");
+}
+
+.collapse-header-background {
+    background-image: url("./assets/images/background-score.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 10% 100%;
+ }
+
+ .collapse-background-time {
+    background-image: url("./assets/images/background-time.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% 100%;
+    padding-top: 10px;
+ }
+ .collapse-background-score {
+    background-image: url("./assets/images/background-score.png");
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    padding-top: 10px;
+ }
+
+ .back-ground-page {
+    background-image: url("./assets/images/background-page.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+ }
+.basic-info {
+    display: none;
+}
+#header-title {
+    text-align: center;
+}
+
+.collapse-mobile {
+    display: block;
+}
+
+.collapse-desktop {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .basic-info {
+      display: flex;
+    }
+    #header-title {
+        text-align: left;
+    }
+    .collapse-mobile {
+        display: none;
+    }
+
+    .collapse-desktop {
+        display: block;
+    }
 }

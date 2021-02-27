@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useEffect, useState } from "react";
+import { MDBContainer } from "mdbreact";
+import "./index.css";
+import Menu from "./Components/Menu";
+import Header from "./Components/LeaderBoard/Header";
+import CollapsePage from "./Components/CollapsePage";
+import CollapseMobile from "./Components/CollapseMobile";
+import { get } from "./helpers/fetch";
+import AppContext from "./context/AppContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [],
+      isLoading: false,
+      error: null
+    };
+    //get('/v1/b043df5a')
+  }
+
+  componentDidMount() {
+    this.fetchUsers();
+  }
+
+  fetchUsers() {
+    // Where we're fetching data from
+    get(`/users`)
+      // We get the API response and receive data in JSON format...
+      .then(response => response.json())
+      // ...then we update the users state
+      .then(data =>
+        this.setState({
+          users: data,
+          isLoading: false,
+        })
+      )
+      // Catch any errors we hit and update the app
+      .catch(error => this.setState({ error, isLoading: false }));
+  }
+
+  render() {
+    return (
+      <MDBContainer >
+        <Menu />
+        <MDBContainer className="back-ground-page" style={{ paddingTop: 1 }}>
+          <Header  />
+          <AppContext.Provider value={this.state}>
+            <CollapsePage />
+            <CollapseMobile />
+          </AppContext.Provider>
+        </MDBContainer>
+      </MDBContainer>
+    );
+  }
 }
 
 export default App;

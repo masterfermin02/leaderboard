@@ -1,0 +1,611 @@
+[{
+  "_id": {
+    "$oid": "6039c9bca664074396d48602"
+  },
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ],
+  "name": "Fermin Perdomo",
+  "photo": "https://randomuser.me/api/portraits/men/45.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "41",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "603a4c23706af3410174e8a2"
+  },
+  "name": "Luis Rodriguez",
+  "photo": "https://randomuser.me/api/portraits/men/82.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "50",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "603a4da4706af3410174e8a3"
+  },
+  "name": "Manuel estrella",
+  "photo": "https://randomuser.me/api/portraits/men/36.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "50",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "603a4db9706af3410174e8a4"
+  },
+  "name": "Pedro Mantinez",
+  "photo": "https://randomuser.me/api/portraits/men/91.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "50",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "603a4dcf706af3410174e8a5"
+  },
+  "name": "Nelson Perez",
+  "photo": "https://randomuser.me/api/portraits/men/20.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "50",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "603a4de2706af3410174e8a6"
+  },
+  "name": "Jose Torres",
+  "photo": "https://randomuser.me/api/portraits/men/7.jpg",
+  "bib": "1085",
+  "age": "27",
+  "gender": "M",
+  "time": "17:42",
+  "score": "50",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "603a4fe3706af3410174e8a7"
+  },
+  "name": "Luis Gonzalez",
+  "photo": "https://randomuser.me/api/portraits/men/58.jpg",
+  "bib": "1085",
+  "age": "29",
+  "gender": "M",
+  "time": "17:32",
+  "score": "55",
+  "strength": "12",
+  "endurance": "8",
+  "dexterity": "9",
+  "desitionMaking": "4",
+  "skills": [
+    {
+      "name": "Post Apocalyptic Highway",
+      "options": [
+        {
+          "name": "Hill Clime",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "Run For The Hills",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Coded Doors",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Spear Throw",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Sand Bagging",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica Caves",
+      "options": [
+        {
+          "name": "Crevasse Crossing",
+          "points": "P,R,W,F",
+          "score": 5,
+          "time": "00:1735"
+        },
+        {
+          "name": "The Canopy",
+          "points": "P,R",
+          "score": 6,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dirty Armor",
+          "points": "P,W",
+          "score": 3,
+          "time": "00:1735"
+        },
+        {
+          "name": "Navigational Challenge",
+          "points": "R,F",
+          "score": 8,
+          "time": "00:1735"
+        },
+        {
+          "name": "Dead Weeight",
+          "points": "P,W,F",
+          "score": 2,
+          "time": "00:1735"
+        }
+      ]
+    }
+  ]
+}]
