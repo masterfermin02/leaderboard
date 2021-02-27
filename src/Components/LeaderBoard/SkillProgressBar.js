@@ -5,10 +5,26 @@ const SkillProgressBar = (props) => {
     const {strength, endurance, dexterity, desitionMaking} = props;
   return (
     <>
-      STRENGTH {strength} <MDBProgress value={strength} className="my-2"  color="info" />
-      ENDURANCE {endurance} <MDBProgress value={endurance} className="my-2" color="warning" />
-      DEXTERITY {dexterity} <MDBProgress value={dexterity} className="my-2" color="success" />
-      DECISION MAKING {desitionMaking} <MDBProgress value={desitionMaking} className="my-2" color="puple" />
+    <div className="d-flex flex-row">
+      <div className="p-2">STRENGTH</div>
+      <div className="p-2">{strength}</div>
+      <div className="p-2" style={{width:800}}><MDBProgress value={parseInt(strength)} className="my-2"  color="info" /></div>
+    </div>
+    <div className="d-flex flex-row">
+      <div className="p-2">ENDURANCE</div>
+      <div className="p-2">{endurance}</div>
+      <div className="p-2" style={{width:800}}><MDBProgress value={parseInt(endurance)} className="my-2" color="warning" /></div>
+    </div>
+    <div className="d-flex flex-row">
+      <div className="p-2">DEXTERITY</div>
+      <div className="p-2">{dexterity}</div>
+      <div className="p-2" style={{width:800}}><MDBProgress value={parseInt(dexterity)} className="my-2" color="success" /></div>
+    </div>
+    <div className="d-flex flex-row">
+      <div className="p-2">DECISION MAKING</div>
+      <div className="p-2">{desitionMaking}</div>
+      <div className="p-2" style={{width:800}}><MDBProgress value={parseInt(desitionMaking)} className="my-2" color="puple" /></div>
+    </div>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { Component, useContext, useState } from "react";
 import { MDBRow, MDBCol, MDBCollapse, MDBContainer, MDBCard, MDBCardHeader, MDBCardBody} from "mdbreact";
 import AppContext from "../context/AppContext";
 import SkillProgressBar from "./LeaderBoard/SkillProgressBar";
+import Event from "./LeaderBoard/Event";
 
 const RenderCollapseItem = () => {
   const {users, isLoading } = useContext(AppContext);
@@ -15,7 +16,19 @@ const toggleCollapse = collapseID => () => {
     <>
     {!isLoading ? (
       users.map((user, index) => {
-        const { name, photo, bib, age, gender, time, score, strength, endurance, dexterity, desitionMaking } = user;
+        const { 
+          name, 
+          photo, 
+          bib, 
+          age, 
+          gender, 
+          time, 
+          score, 
+          strength, 
+          endurance, 
+          dexterity, 
+          skills,
+          desitionMaking } = user;
         return (
           <MDBRow key={index}>
             <MDBCol size='12' style={{ paddingLeft: 0, paddingRight: 0, marginTop: 10}} >
@@ -49,16 +62,9 @@ const toggleCollapse = collapseID => () => {
                     dexterity={dexterity} 
                     desitionMaking={desitionMaking}
                     />
-                    Pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                    terry richardson ad squid. 3 wolf moon officia aute, non
-                    cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                    laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                    bird on it squid single-origin coffee nulla assumenda shoreditch
-                    et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                    anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                    butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                    raw denim aesthetic synth nesciunt you probably haven&apos;t
-                    heard of them accusamus labore sustainable VHS.
+                    {(skills.map((skill, index) => {
+                      return <Event value={skill} number={index} />
+                    }))}
                   </MDBCardBody>
                 </MDBCollapse>
               </MDBCard>

@@ -1,6 +1,8 @@
 import React, { Component, useContext, useState } from "react";
-import { MDBRow, MDBCol, MDBCollapse, MDBContainer, MDBCard, MDBCardBody} from "mdbreact";
+import { MDBRow, MDBCol, MDBCollapse, MDBContainer, MDBCard, MDBCardBody, MDBBadge} from "mdbreact";
 import AppContext from "../context/AppContext";
+import SkillProgressBar from "./LeaderBoard/SkillProgressBar";
+import Event from "./LeaderBoard/Event";
 
 const RenderCollapseItem = () => {
     const {users, isLoading } = useContext(AppContext);
@@ -14,37 +16,68 @@ const RenderCollapseItem = () => {
       <>
       {!isLoading ? (
         users.map((user, index) => {
-          const { name, photo, bib, age, gender, time, score, strength } = user;
+          const { 
+            name, 
+            photo, 
+            bib, 
+            age, 
+            gender, 
+            time, 
+            score, 
+            strength, 
+            endurance, 
+            dexterity, 
+            skills,
+            desitionMaking } = user;
           return (
             <MDBRow key={index}>
               <MDBCol size='12' style={{ paddingLeft: 0, paddingRight: 0, marginTop: 10}} >
               <MDBCard >
                 <div className="card-header p-0 z-depth-1" role="tab" id="heading30">
-                    <a onClick={toggleCollapse(`collapse-${index}`)} href="#collapse30" className="black-text" >
+                    <a onClick={toggleCollapse(`collapse-${index}`)} className="black-text" >
+                      <div className="d-flex justify-content-between">
+                        <div className="p-2">
                         <span style={{ marginLeft: 10, marginRight: 10 }} className="text-uppercase mb-0 py-3 mt-1">
-                            {index + 1}
-                        </span>
+                              {index + 1}
+                          </span>
+                        </div>
+                        <div className="p-2">
                         <img src={photo} style={{ width: 50}} alt="aligment" />
-                        <span style={{ marginLeft: 30}}>
-                            {name}
-                        </span>
-                        <span style={{ marginLeft: 30}}>
-                            Score: {score}
-                        </span>
+                          <span style={{ marginLeft: 30}}>
+                              {name}
+                          </span>
+                        </div>
+                        <div className="p-2 ">
+                          <span style={{ marginLeft: 30}}>
+                            <MDBBadge tag="a" color="default">BIB: {bib}</MDBBadge>
+                                <MDBBadge style={{marginLeft: 10}}>SCORE: {score}</MDBBadge>
+                            </span>
+                        </div>
+                      </div>
                     </a>
                 </div>
                 <MDBCollapse id={`collapse-${index}`} isOpen={collapseID}>
                   <MDBCardBody>
-                    Pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                    terry richardson ad squid. 3 wolf moon officia aute, non
-                    cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                    laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                    bird on it squid single-origin coffee nulla assumenda shoreditch
-                    et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                    anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                    butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                    raw denim aesthetic synth nesciunt you probably haven&apos;t
-                    heard of them accusamus labore sustainable VHS.
+                    <div className="d-flex justify-content-between">
+                      <div className="p-2">
+                        <MDBBadge tag="a" color="default">AGE: {age}</MDBBadge>
+                      </div>
+                      <div className="p-2">
+                        <MDBBadge tag="a" color="default">GENDER: {gender}</MDBBadge>
+                      </div>
+                      <div className="p-2">
+                        <MDBBadge tag="a" color="default"> TIME: {time}</MDBBadge>
+                      </div>
+                    </div>
+                  <SkillProgressBar 
+                    strength={strength}  
+                    endurance={endurance} 
+                    dexterity={dexterity} 
+                    desitionMaking={desitionMaking}
+                    />
+                    {(skills.map((skill, index) => {
+                      return <Event value={skill} number={index} />
+                    }))}
                   </MDBCardBody>
                 </MDBCollapse>
               </MDBCard>
