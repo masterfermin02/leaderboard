@@ -53,7 +53,7 @@ There is no need for the developers to install MongoDB since all this is include
 
 ## How to execute the project
 
-If you want to be able to execute the project you will first need to install the requirements listed in the [Project Requirements Section](#project-requirements).
+If you want to be able to execute the project you will first need to install the requirements listed in the [Project Requirements Section](#project--requirements).
 
 - Clone this repo by running:
 
@@ -67,114 +67,32 @@ If you want to be able to execute the project you will first need to install the
   ./init-env.sh
   ```
 
-### You can choose to run the app using Docker and Make:
+### You can run the app using Docker:
 
-- Build the database container:
+- Build the database container, seed it and also install server dependencies:
 
 ```bash
 make build
 ```
 
-- Run the project on watch mode:
+- Run the nodejs server:
 
 ```bash
-make up
+make server
 ```
 
-### Or, you can run the project manually:
+- Install frontend dependencies:
+```bash
+npm install
+```
 
-- Create containers:
+- Start the local frontend app
 
 ```bash
-docker-compose up
+make frontend
 ```
 
-- Run the server:
-
-```bash
-npm run server
+- You should see the app running on:
 ```
-
-- Generate the Sequelize migrations:
-
-```bash
-npm run migrate
+  🚀 Client Running on: http://localhost:3000
 ```
-
-- Generate the Sequelize seeds (default roles):
-
-```bash
-npm run seed
-```
-
-The local development server will be running at [localhost:8080](http://localhost:8080).
-At the same time you will have a database administration interface (by Adminer) running at [localhost:4000](http://localhost:4000).
-
-## To remove all the data you have made after running the app, you can run:
-
-- Stop all the containers:
-
-```bash
-make stop-all
-```
-
-- Remove unused the containers:
-
-```bash
-make burn
-```
-
-- Clean the containers dummy data:
-
-```bash
-npm run clean
-```
-
-- You can also remove the unused containers:
-
-```bash
-make rmi-dangle
-```
-
-and
-
-```bash
-make rmv-dangle
-```
-
-## Run with localtunnel:
-
-- Install `localtunnel` globally:
-
-  ```bash
-  npm install -g localtunnel
-  ```
-
-- Set the server to accept requests from all domains:
-  - Go to `/app/index.js`
-  - Replace the line:
-    ```javascript
-    app.use(cors({ origin: ORIGIN_URL, credentials: true }));
-    ```
-    with:
-    ```javascript
-    app.use(cors());
-    ```
-- Run the server with your preferred method listed above
-
-- Serve the app with `localtunnel`:
-
-  ```bash
-  lt --port 8080
-  ```
-
-- `localtunnel` will provide the link where the server is running in your lan. This is the link you need to run the client-side of the application with `localtunnel` as well.
-
-## Test
-
-To test the endpoints of the application:
-
-- Make sure you have cleaned the dummy data of the container with `npm run clean`.
-- Run the tests with `make test`
-
-> All tests run as a pre-push hook with husky
