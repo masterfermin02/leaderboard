@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBadge } from "mdbreact";
 
 const Event = (props) => {
     const { value: { name, options }, number } = props;
@@ -14,7 +14,7 @@ const Event = (props) => {
                     currentIndex++;
                     return (
                         <MDBRow key={key}>
-                            <MDBCol size="2" >{currentIndex}</MDBCol>
+                            <MDBCol size="2" ><MDBBadge pill color="dark">{currentIndex}</MDBBadge></MDBCol>
                             <MDBCol size="2" >{exircise.name}</MDBCol>
                             <MDBCol size="4" ><PerformanceBoard points={exircise.points} /></MDBCol>
                             <MDBCol size="2" >{exircise.time}</MDBCol>
