@@ -43,9 +43,7 @@ const RenderCollapseItem = () => {
                         </div>
                         <div className="p-2">
                         <img src={photo} style={{ width: 50}} alt="aligment" />
-                          <span style={{ marginLeft: 30}}>
-                              {name}
-                          </span>
+                          <span className="participan-name" style={{ marginLeft: 30}}>{name}</span>
                         </div>
                         <div className="p-2 ">
                           <span className="mobileScore">
@@ -60,7 +58,7 @@ const RenderCollapseItem = () => {
                   <MDBCardBody>
                     <div className="d-flex justify-content-between">
                       <div className="p-2">
-                        <MDBBadge tag="a" color="default">AGE: {age}</MDBBadge>
+                        <MDBBadge tag="a" className="age" color="default">AGE: {age}</MDBBadge>
                       </div>
                       <div className="p-2">
                         <MDBBadge tag="a" color="default">GENDER: {gender}</MDBBadge>

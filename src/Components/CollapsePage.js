@@ -44,14 +44,14 @@ const toggleCollapse = collapseID => () => {
                       <MDBCol size="2" className="collapse-col"  >
                         <img src={photo} style={{ height: '100%'}} alt="aligment" />
                       </MDBCol>
-                      <MDBCol size="4"  className="margin-top-10 collapse-col font-weight-bold" > {name}</MDBCol>
+                      <MDBCol size="4" className="margin-top-10 participan-name collapse-col font-weight-bold" >{name}</MDBCol>
                     </MDBRow>
                   </MDBCol>
                   <MDBCol size="1" className="margin-top-10 basic-info collapse-col"  >{bib}</MDBCol>
-                  <MDBCol size="1" className="margin-top-10 basic-info collapse-col" > {age}</MDBCol>
-                  <MDBCol size="1" className="margin-top-10 basic-info collapse-col" style={{ textAlign: "center" }} > {gender}</MDBCol>
-                  <MDBCol size="1" className="collapse-col basic-info white-text collapse-background-time" > {time}</MDBCol>
-                  <MDBCol size="1" className="collapse-col basic-info white-text collapse-background-score" > {score}</MDBCol>
+                  <MDBCol size="1" className="margin-top-10 basic-info age collapse-col" >{age}</MDBCol>
+                  <MDBCol size="1" className="margin-top-10 basic-info collapse-col" style={{ textAlign: "center" }} >{gender}</MDBCol>
+                  <MDBCol size="1" className="collapse-col basic-info white-text collapse-background-time" >{time}</MDBCol>
+                  <MDBCol size="1" className="collapse-col basic-info white-text collapse-background-score" >{score}</MDBCol>
                 </MDBRow>
                 </MDBCardHeader>
                 <MDBCollapse id={`collapse-${index}`} isOpen={collapseID}>
