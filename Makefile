@@ -24,6 +24,7 @@ build:
 	cd server && npm install
 	docker cp server/db_backup/dbdump.json server_mongo_1:/tmp/dbdump.json
 	docker exec server_mongo_1 mongoimport --db test --collection users --jsonArray --authenticationDatabase admin --username root --password example --file /tmp/dbdump.json
+	cd server && npm run start
 
 stop-backend:
 	cd server && docker-compose down

@@ -67,7 +67,7 @@ If you want to be able to execute the project you will first need to install the
   ./init-env.sh
   ```
 
-### You can run the app using Docker:
+### You can run the app using Docker and Make:
 
 - Build the database container, seed it and also install server dependencies:
 
@@ -102,6 +102,42 @@ make frontend
 ```bash
 make stop-backend
 ```
+
+## Or, you can run the project manually:
+
+- Go the server folder
+```bash
+  cd server
+```
+
+- Create containers:
+```bash
+  docker-compose up
+```
+- Run the server:
+```bash
+npm run start
+```
+
+- Generate the Sequelize seeds:
+```bash
+  docker cp server/db_backup/dbdump.json server_mongo_1:/tmp/dbdump.json
+	docker exec server_mongo_1 mongoimport --db test --collection users --jsonArray --authenticationDatabase admin --username root --password example --file /tmp/dbdump.json
+```
+
+The local development server will be running at localhost:5000. At the same time you will have a database administration interface (by Adminer) running at localhost:8081.
+
+- Go back to the root folder
+```bash
+  cd ..
+```
+
+- Start frontend application
+```bash
+npm start
+```
+
+The local frontend application will be running at localhost:3000.
 
 - Server and api documentations are on the server folder:
 [Server doc](https://github.com/masterfermin02/leaderboard/tree/main/server)

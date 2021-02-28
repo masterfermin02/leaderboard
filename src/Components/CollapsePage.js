@@ -63,7 +63,7 @@ const toggleCollapse = collapseID => () => {
                     desitionMaking={desitionMaking}
                     />
                     {(skills.map((skill, index) => {
-                      return <Event value={skill} number={index} />
+                      return <Event key={index} value={skill} number={index} />
                     }))}
                   </MDBCardBody>
                 </MDBCollapse>

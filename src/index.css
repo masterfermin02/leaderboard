@@ -88,6 +88,15 @@
     transition: all .3s linear;
 }
 
+.mobile-collapse-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileScore {
+    margin-left: 0px;
+}
+
 @media (min-width: 1000px) {
     .basic-info {
       display: flex;
@@ -101,5 +110,15 @@
 
     .collapse-desktop {
         display: block;
+    }
+}
+
+@media (min-width: 530px) {
+    .mobile-collapse-header {
+        display: flex;
+        flex-direction: row;
+    }
+    .mobileScore {
+        margin-left: 30px;
     }
 }
